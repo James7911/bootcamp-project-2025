@@ -1,7 +1,8 @@
 /* HTML tag selector */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f0f8ff; /* light blue background */
+  color: #333333;            /* dark gray text */
 }
 
 /* Class selector */
@@ -43,4 +44,49 @@ input[type="text"] {
 /* Adjacent selector: paragraph after h1 */
 h1 + p {
   font-weight: bold;
+}
+
+/* Unvisited link */
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Visited link */
+a:visited {
+  color: purple;
+}
+
+/* When clicking (active) */
+a:active {
+  color: red;
+}
+
+/* When hovering with mouse */
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+/* When a form input is focused */
+input:focus {
+  border: 2px solid #aaa;
+  outline: none; /* Removes default outline */
+}
+
+/* Text styling */
+h1 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: navy;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Georgia", serif;
+  text-decoration: underline;
+  text-align: justify;
 }
