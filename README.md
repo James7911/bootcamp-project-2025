@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Developer Bootcamp 2025
 This is the start of your 2025 bootcamp project!
 
@@ -14,3 +15,10 @@ To submit your work, create a pull request from your own fork (DO NOT MERGE if y
 4. Fill out the PR template description!
 5. Assign the engineering team as 'Reviewers'
 6. Link the milestone issue to the PR
+=======
+# James's Personal Website
+
+This is a personal website built using the Hack4Impact Starter Pack!
+
+[Visit it Here!](https://James7911.github.io)
+>>>>>>> import-from-source

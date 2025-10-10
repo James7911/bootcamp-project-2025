@@ -1,0 +1,92 @@
+/* HTML tag selector */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* light blue background */
+  color: #333333;            /* dark gray text */
+}
+
+/* Class selector */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ID selector */
+#main-title {
+  color: navy;
+  text-align: center;
+}
+
+/* Combined selector: paragraph with class "title" */
+p.title {
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Attribute selector: required input fields */
+input[required] {
+  border: 1px solid red;
+  background-color: #fff0f0;
+}
+
+/* Attribute selector: input type text */
+input[type="text"] {
+  padding: 5px;
+}
+
+/* Child selector: list items inside #positions-list */
+#positions-list > li {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+
+/* Adjacent selector: paragraph after h1 */
+h1 + p {
+  font-weight: bold;
+}
+
+/* Unvisited link */
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Visited link */
+a:visited {
+  color: purple;
+}
+
+/* When clicking (active) */
+a:active {
+  color: red;
+}
+
+/* When hovering with mouse */
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+/* When a form input is focused */
+input:focus {
+  border: 2px solid #aaa;
+  outline: none; /* Removes default outline */
+}
+
+/* Text styling */
+h1 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: navy;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Georgia", serif;
+  text-decoration: underline;
+  text-align: justify;
+}
