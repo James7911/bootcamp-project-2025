@@ -18,30 +18,30 @@ body {
   text-align: center;
 }
 
-/* Combined selector: paragraph with class "title" */
+/* paragraph with class "title" */
 p.title {
   font-style: italic;
   font-size: 16px;
 }
 
-/* Attribute selector: required input fields */
+/* required input fields */
 input[required] {
   border: 1px solid red;
   background-color: #fff0f0;
 }
 
-/* Attribute selector: input type text */
+/* input type text */
 input[type="text"] {
   padding: 5px;
 }
 
-/* Child selector: list items inside #positions-list */
+/* list items inside #positions-list */
 #positions-list > li {
   border-bottom: 1px dashed #ccc;
   padding: 5px 0;
 }
 
-/* Adjacent selector: paragraph after h1 */
+/* next paragraph after h1 */
 h1 + p {
   font-weight: bold;
 }
@@ -87,6 +87,14 @@ h1 {
 p {
   font-size: 16px;
   font-family: "Georgia", serif;
-  text-decoration: underline;
   text-align: justify;
 }
+
+.blog-image {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 5px; /* Optional: soft corners */
+}
+
