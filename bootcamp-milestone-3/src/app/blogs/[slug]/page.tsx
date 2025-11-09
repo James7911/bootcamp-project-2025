@@ -2,15 +2,12 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import connectDB from "@/database/db";
 import { Blog } from "@/database/blogSchema";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
-export default async function BlogPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function BlogPost({ params }: { params: Params }) {
   await connectDB();
 
-  const { slug } = params;
+  const slug = params.slug as string;
   if (!slug) return notFound();
 
   const blog = await Blog.findOne({ slug }).lean<Blog>();
