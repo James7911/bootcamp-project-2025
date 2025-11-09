@@ -1,4 +1,3 @@
-// src/app/blogs/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import connectDB from "@/database/db";
