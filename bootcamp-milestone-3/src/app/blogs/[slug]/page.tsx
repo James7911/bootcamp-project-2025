@@ -3,7 +3,11 @@ import Image from "next/image";
 import connectDB from "@/database/db";
 import { Blog } from "@/database/blogSchema";
 
-export default async function BlogPost({ params }) {
+interface PageParams {
+  params: { slug: string };
+}
+
+export default async function BlogPost({ params }: PageParams) {
   await connectDB();
 
   const { slug } = params;
