@@ -1,21 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
-import connectDB from "@/database/db";          
-import Blog from "@/database/blogSchema";       
+import connectDB from "@/database/db";
+import Blog from "@/database/blogSchema";
 
-type IParams = {
-  params: {
-    slug: string;
-  };
-};
+export async function GET(
+  req: NextRequest,
+  context: { params: { slug: string } }
+) {
+  
+  await connectDB();
 
-export async function GET(req: NextRequest, { params }: IParams) {
-  await connectDB(); // connect to MongoDB
-  const { slug } = params; // get slug from URL
+  const { slug } = context.params;
 
   try {
+    
     const blog = await Blog.findOne({ slug }).orFail();
     return NextResponse.json(blog);
-  } catch (err) {
+  } catch (_err) {
+   
     return NextResponse.json("Blog not found.", { status: 404 });
   }
 }
