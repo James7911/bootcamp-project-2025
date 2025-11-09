@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./BlogPreview.module.css";
 import { Blog } from "@/static/blogData";
 
-interface Props extends Blog {}
+type Props = Blog;
 
 export default function BlogPreview({
   title,
