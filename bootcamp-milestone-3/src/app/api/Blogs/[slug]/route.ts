@@ -4,7 +4,7 @@ import { Blog } from "@/database/blogSchema";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } } 
+  { params }: { params: any } 
 ) {
   await connectDB();
 
