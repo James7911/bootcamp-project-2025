@@ -1,8 +1,6 @@
-#ignore node modules
-<<<<<<< HEAD
-/node_modules 
-=======
-/node_modules 
+# ignore node modules
+/node_modules
+
+# ignore old milestones
 /bootcamp-milestone-1
 /bootcamp-milestone-2
->>>>>>> 2785069 (reorganizing files)
