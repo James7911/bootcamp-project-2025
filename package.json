@@ -1,0 +1,12 @@
+{
+  "name": "bootcamp-project-2025",
+  "private": true,
+  "scripts": {
+    "dev": "cd bootcamp-milestone-3 && npm run dev",
+    "build": "cd bootcamp-milestone-3 && npm run build",
+    "start": "cd bootcamp-milestone-3 && npm start"
+  },
+  "dependencies": {
+    "mongoose": "^8.19.3"
+  }
+}
