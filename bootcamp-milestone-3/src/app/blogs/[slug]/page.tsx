@@ -1,19 +1,16 @@
-// src/app/blogs/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import connectDB from "@/database/db";
 import { Blog } from "@/database/blogSchema";
 
-type PageParams = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function BlogPost({ params }: PageParams) {
+export default async function BlogPost({
+  params,
+}: {
+  params: { slug: string };
+}) {
   await connectDB();
 
-  const slug = params?.slug;
+  const { slug } = params;
   if (!slug) return notFound();
 
   const blog = await Blog.findOne({ slug }).lean<Blog>();
