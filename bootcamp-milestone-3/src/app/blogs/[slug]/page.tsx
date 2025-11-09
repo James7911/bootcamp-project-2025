@@ -3,14 +3,10 @@ import Image from "next/image";
 import connectDB from "@/database/db";
 import { Blog } from "@/database/blogSchema";
 
-type PageProps = {
-  params: { slug: string };
-};
-
-export default async function BlogPost({ params }: PageProps) {
+export default async function BlogPost({ params }: any) {
   await connectDB();
 
-  const slug = params.slug;
+  const slug = params?.slug;
   if (!slug) return notFound();
 
   const blog = await Blog.findOne({ slug }).lean<Blog>();
