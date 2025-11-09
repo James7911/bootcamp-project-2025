@@ -10,12 +10,11 @@ interface Props {
 export default async function BlogPost({ params }: Props) {
   await connectDB();
 
-  const slug = params?.slug; 
+  const { slug } = params;
   if (!slug) return notFound();
 
-  const blog = await Blog.findOne({ slug }).lean();
-
-  if (!blog) notFound();
+  const blog = await Blog.findOne({ slug }).lean<Blog>();
+  if (!blog) return notFound();
 
   return (
     <article className="max-w-3xl mx-auto p-6">
