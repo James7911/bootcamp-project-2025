@@ -3,11 +3,10 @@ import Image from "next/image";
 import connectDB from "@/database/db";
 import { Blog } from "@/database/blogSchema";
 
-export default async function BlogPost({ params }: { params: unknown }) {
+export default async function BlogPost({ params }: any) {
   await connectDB();
 
-  // Assert the shape of params safely
-  const { slug } = params as { slug?: string };
+  const { slug } = params;
   if (!slug) return notFound();
 
   const blog = await Blog.findOne({ slug }).lean<Blog>();
